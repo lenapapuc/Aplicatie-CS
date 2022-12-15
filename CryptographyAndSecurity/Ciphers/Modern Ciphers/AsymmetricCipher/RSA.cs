@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Text;
-using Lab2;
 
-namespace CryptographyAndSecurity.Modern_Ciphers.AsymmetricCipher
+namespace CryptographyAndSecurity
 {
     public class RSA : Cipher
     {

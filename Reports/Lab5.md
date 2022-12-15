@@ -91,3 +91,26 @@ against the code from the application:
 
 ![successful login.png](..%2FImages%2Fsuccessful%20login.png)
 
+## Authorization
+
+&ensp;&ensp;&ensp; Authorization refers to the process that determines what a user is able to do.
+In this service, I implemented role based authorization. When an identity is created it may belong to one or more roles. 
+Therefore, I have two examples of roles: "modern" and "classical". The user who logs in with the role
+of "modern" can only encrypt using RSA, viceversa the one with role "classical" can encrypt using Caesar Cipher:
+
+```
+        if (login.role != "classical") return "User Not Authorized";
+        Cipher cesarCipher = new CaesarCipher();
+        string ret = cesarCipher.Encrypt(encryption.input, encryption.key);
+        return ret;
+```
+
+&ensp;&ensp;&ensp;  The call is done through Postman.
+
+&ensp;&ensp;&ensp;  The user "chucky1" has the role "modern" so he cannot encrypt with Caesar Cipher:
+
+![encryptionNotAuthorized.png](..%2FImages%2FencryptionNotAuthorized.png)
+
+&ensp;&ensp;&ensp; The user "chucky2", with role "classical" is able to do that:
+
+![encryptionCesar.png](..%2FImages%2FencryptionCesar.png)

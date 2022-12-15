@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-using Lab2;
+
 
 namespace CryptographyAndSecurity
 {

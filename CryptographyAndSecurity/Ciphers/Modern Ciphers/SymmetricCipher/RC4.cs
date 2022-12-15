@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Lab2
+namespace CryptographyAndSecurity
 {
     public class RC4 : Cipher
     {

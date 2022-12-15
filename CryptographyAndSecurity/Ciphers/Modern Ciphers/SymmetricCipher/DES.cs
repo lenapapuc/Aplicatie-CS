@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using static Constants;
-namespace Lab2
+namespace CryptographyAndSecurity
 {
     public class DES : Cipher
     {
